@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.nav-item {
+  background-color: darkturquoise;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%; /* Adjust the maximum width of the slider here */
+  width: 80%; /* You can set width in percentage or fixed pixel value */
+  height: 400px; /* Set the height of the slider */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%; /* Make the height of the images fill the slider container */
+  object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  width: auto;
+  height: auto;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
